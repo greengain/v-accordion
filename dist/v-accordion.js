@@ -401,8 +401,8 @@ function vPaneDirective ($timeout, $animate, accordionConfig) {
 
       var states = accordionConfig.states;
 
-      var paneHeader = iElement.find('v-pane-header'),
-          paneContent = iElement.find('v-pane-content'),
+      var paneHeader = angular.element(iElement.find('v-pane-header')[0]),
+          paneContent = angular.element(iElement.find('v-pane-content')[0]),
           paneInner = paneContent.find('div');
 
       var accordionId = accordionCtrl.getAccordionId();
